@@ -97,6 +97,25 @@ const Home = () => {
             experiences.
           </p>
         </div>
+        <div className="mt-10">
+          <h2 className="text-3xl font-bold text-center text-gray-800 mb-4">
+            Check Out My Deployed Site!
+          </h2>
+          <p className="text-xl text-gray-600 text-center mb-6">
+            Dive into my work and explore the EssentialD Skin Care website,
+            showcasing my skills in action.
+          </p>
+          <div className="text-center">
+            <a
+              href="https://essentiald-skin-care.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-3 rounded-md text-lg transition duration-300"
+            >
+              Visit Essential'D Skin Care
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );
