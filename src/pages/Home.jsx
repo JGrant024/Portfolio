@@ -10,7 +10,7 @@ const Home = () => {
         </p>
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 space-y-4 md:space-y-0 md:space-x-6">
           <a
-            href="#projects"
+            href="Jonathan_Grant_Resume .pdf"
             className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md text-lg transition duration-300"
           >
             Resume
