@@ -92,7 +92,7 @@ const Home = () => {
           <p className="text-xl text-gray-600 text-center">
             I'm a passionate software developer with a focus on creating
             impactful web applications. My journey in tech started with a
-            curiosity for how websites work, and it has since grown into a
+            curiosity for how websites work, and now it's growing into a
             full-fledged career. Stay tuned for more updates on my projects and
             experiences.
           </p>
@@ -114,6 +114,19 @@ const Home = () => {
             >
               Visit Essential'D Skin Care
             </a>
+          </div>
+          <div className="mt-10 text-center ">
+            <textarea
+              className="text-center bg-yellow-50"
+              name=""
+              id=""
+              cols="30"
+              rows="5"
+              placeholder="I would love for you to leave some feedback! "
+            ></textarea>
+            <div className="mt-5">
+              <button>Submit</button>
+            </div>
           </div>
         </div>
       </div>
