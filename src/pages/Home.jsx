@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHtml5,
@@ -6,8 +7,26 @@ import {
   faPython,
   faJsSquare,
 } from "@fortawesome/free-brands-svg-icons";
+import { createClient } from "@supabase/supabase-js";
+
+
 
 const Home = () => {
+  const [feedback, setFeedback] = useState("");
+
+  const handleFeedbackSubmit = async (event) => {
+    event.preventDefault();
+    const { data, error } = await supabase
+      .from("Feedback")
+      .insert([{ feedback }]);
+    if (error) {
+      console.log("Error:", error);
+    } else {
+      console.log("Feedback submitted:", data);
+      setFeedback(""); // Clear the textarea after submission
+    }
+  };
+
   return (
     <div className="min-h-screen flex flex-col justify-center items-center bg-gradient-to-r from-cyan-500 to-blue-500">
       <div className="bg-white/80 rounded-lg p-10 shadow-xl">
@@ -41,7 +60,6 @@ const Home = () => {
             LinkedIn
           </a>
         </div>
-        {/* Tech Stack Section */}
         <div className="mt-10">
           <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">
             Tech Stack
@@ -84,50 +102,23 @@ const Home = () => {
             </div>
           </div>
         </div>
-        {/* About Me Section */}
-        <div className="mt-10">
-          <h2 className="text-3xl font-bold text-center text-gray-800 mb-4">
-            About Me
-          </h2>
-          <p className="text-xl text-gray-600 text-center">
-            I'm a passionate software developer with a focus on creating
-            impactful web applications. My journey in tech started with a
-            curiosity for how websites work, and now it's growing into a
-            full-fledged career. Stay tuned for more updates on my projects and
-            experiences.
-          </p>
-        </div>
-        <div className="mt-10">
-          <h2 className="text-3xl font-bold text-center text-gray-800 mb-4">
-            Check Out My Deployed Site!
-          </h2>
-          <p className="text-xl text-gray-600 text-center mb-6">
-            Dive into my work and explore the EssentialD Skin Care website,
-            showcasing my skills in action.
-          </p>
-          <div className="text-center">
-            <a
-              href="https://essentiald-skin-care.netlify.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-3 rounded-md text-lg transition duration-300"
-            >
-              Visit Essential'D Skin Care
-            </a>
-          </div>
-          <div className="mt-10 text-center ">
+        <div className="mt-10 text-center">
+          <form onSubmit={handleFeedbackSubmit}>
             <textarea
-              className="text-center bg-yellow-50"
-              name=""
-              id=""
-              cols="30"
+              className="w-full max-w-lg p-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 transition-colors"
               rows="5"
-              placeholder="I would love for you to leave some feedback! "
+              placeholder="I would love for you to leave some feedback!"
+              value={feedback}
+              onChange={(e) => setFeedback(e.target.value)}
             ></textarea>
-            <div className="mt-5">
-              <button>Submit</button>
-            </div>
-          </div>
+            <br />
+            <button
+              type="submit"
+              className="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-colors"
+            >
+              Submit
+            </button>
+          </form>
         </div>
       </div>
     </div>
