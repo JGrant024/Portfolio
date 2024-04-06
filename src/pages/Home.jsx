@@ -100,6 +100,19 @@ const Home = () => {
             </div>
           </div>
         </div>
+        {/* About Me Section */}
+        <div className="mt-10">
+          <h2 className="text-3xl font-bold text-center text-gray-800 mb-4">
+            About Me
+          </h2>
+          <p className="text-xl text-gray-600 text-center">
+            I'm a passionate software developer with a focus on creating
+            impactful web applications. My journey in tech started with a
+            curiosity for how websites work, and it has since grown into a
+            full-fledged career. Stay tuned for more updates on my projects and
+            experiences.
+          </p>
+        </div>
         <div className="mt-10">
           <h2 className="text-3xl font-bold text-center text-gray-800 mb-4">
             Check Out My Deployed Site!
