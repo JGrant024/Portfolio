@@ -32,7 +32,7 @@ const Home = () => {
           Welcome to Jonathan's Portfolio
         </h1>
         <p className="text-xl text-gray-600 mt-4 text-center">
-          Discover my projects and skills
+          Discover my projects and skills.
         </p>
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 space-y-4 md:space-y-0 md:space-x-6">
           <a
