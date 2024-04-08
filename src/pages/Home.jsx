@@ -108,7 +108,7 @@ const Home = () => {
           <p className="text-xl text-gray-600 text-center">
             I'm a passionate software developer with a focus on creating
             impactful web applications. My journey in tech started with a
-            curiosity for how websites work, and it has since grown into a
+            curiosity for how websites work, and it is now growing into a
             full-fledged career. Stay tuned for more updates on my projects and
             experiences.
           </p>
