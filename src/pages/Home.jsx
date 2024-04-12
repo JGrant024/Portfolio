@@ -128,7 +128,7 @@ const Home = () => {
               rel="noopener noreferrer"
               className="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-3 rounded-md text-lg transition duration-300"
             >
-              Visit Essential'D Skin Care
+              Visit Essential'D Skin Care LLC 
             </a>
           </div>
         </div>
